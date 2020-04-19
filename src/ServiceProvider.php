@@ -14,6 +14,9 @@ class ServiceProvider extends BaseServiceProvider
     {
         // load migrations
         $this->loadMigrationsFrom(__DIR__ . '/../migrations/');
+
+        // register config file
+        $this->mergeConfigFrom(__DIR__ . '/../config/optionable.php', 'optionable');
     }
 
     /**
