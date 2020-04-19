@@ -10,8 +10,8 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.4",
-        "illuminate/support": "^7.4",
-        "illuminate/database":"^7.4"
+        "illuminate/support": "^7.0",
+        "illuminate/database":"^7.0"
     },
     "config": {
         "optimize-autoloader": true
