@@ -1,0 +1,31 @@
+{
+    "name": "plug2team/optionable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cesar Augusto",
+            "email": "cesinhagutierres@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^7.4",
+        "illuminate/database":"^7.4"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Plug2Team\\Optionable\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+           "providers": [
+               "Plug2Team\\Optionable\\ServiceProvider"
+           ]
+        }
+    }
+}
