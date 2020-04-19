@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Option
- * @property string name
- * @property string slug
- * @property int action
+ * @property string label
+ * @property string action
  * @property string description
  * @property bool default_status
  * @package Plug2Team\Optionable\Models
@@ -18,8 +17,7 @@ use Illuminate\Database\Eloquent\Model;
 class Option extends Model
 {
     protected $fillable = [
-        'name',
-        'slug',
+        'label',
         'action',
         'description',
         'default_status'

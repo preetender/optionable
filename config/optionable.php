@@ -1,5 +1,13 @@
 <?php
 
 return [
-    'cache_tag_name' => 'optionables'
+    'cache' => [
+        'tag' => 'optionables',
+        'ttl' => 60 * 60 * 24,
+        'name' => 'option.%s'
+    ],
+
+    'option' => [
+        'default_value' => false
+    ]
 ];
