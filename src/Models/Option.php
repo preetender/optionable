@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Plug2Team\Optionable\Models;
+namespace Preetender\Optionable\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string action
  * @property string description
  * @property bool default_status
- * @package Plug2Team\Optionable\Models
+ * @package Preetender\Optionable\Models
  */
 class Option extends Model
 {

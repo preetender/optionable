@@ -1,15 +1,15 @@
 {
-    "name": "plug2team/optionable",
+    "name": "preetender/optionable",
     "license": "MIT",
     "authors": [
         {
-            "name": "Cesar Augusto",
+            "name": "Cesar Gutierres",
             "email": "cesinhagutierres@gmail.com"
         }
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.4",
+        "php": "^8.1",
         "illuminate/support": "^7.0",
         "illuminate/database":"^7.0"
     },
@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Plug2Team\\Optionable\\": "src/"
+            "Preetender\\Optionable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
            "providers": [
-               "Plug2Team\\Optionable\\ServiceProvider"
+               "Preetender\\Optionable\\ServiceProvider"
            ]
         }
     }

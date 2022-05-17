@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Plug2Team\Concerns;
+namespace Preetender\Concerns;
 
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Plug2Team\Optionable\Models\Option;
+use Preetender\Optionable\Models\Option;
 
 trait Optionable
 {

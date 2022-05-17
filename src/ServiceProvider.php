@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Plug2Team\Optionable;
+namespace Preetender\Optionable;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

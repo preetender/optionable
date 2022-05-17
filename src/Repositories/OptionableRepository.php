@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Plug2Team\Optionable\Repositories;
+namespace Preetender\Optionable\Repositories;
 
 
 use Illuminate\Database\Eloquent\Model;
-use Plug2Team\Optionable\Models\Option;
+use Preetender\Optionable\Models\Option;
 
 class OptionableRepository
 {
