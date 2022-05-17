@@ -12,10 +12,8 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot() : void
     {
-        // load migrations
         $this->loadMigrationsFrom(__DIR__ . '/../migrations/');
 
-        // register config file
         $this->mergeConfigFrom(__DIR__ . '/../config/optionable.php', 'optionable');
     }
 

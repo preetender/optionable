@@ -9,7 +9,7 @@ use Preetender\Optionable\Repositories\OptionableRepository;
 
 /**
  * Class Optionable
- * @method static insert(?string $label, string $action, ?string $description = null)
+ * @method static insert(?string $label, string $action, string $description = null)
  * @package Preetender\Optionable\Facades
  */
 class Optionable extends Facade

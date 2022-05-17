@@ -3,8 +3,7 @@
 
 namespace Preetender\Optionable\Repositories;
 
-
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\App;
 use Preetender\Optionable\Models\Option;
 
 class OptionableRepository
@@ -25,12 +24,12 @@ class OptionableRepository
      * @param string|null $description
      * @return mixed
      */
-    public function insert(string $label, string $action, ?string $description = null)
+    public function insert(string $label, string $action, string $description = null)
     {
         $option = $this->model->newQuery()->firstOrNew(compact('label'));
         $option->action = $action;
         $option->description = $description;
-        $option->default_status = config('optionable.option.default_value');
+        $option->default_status = $this->getConfig('optionable.option.default_value');
         $saved = $option->save();
 
         if($saved) {
@@ -89,7 +88,11 @@ class OptionableRepository
         $this->addIndex($item->id);
 
         // persist option
-        $this->resolveCache()->add($this->getCacheName($item->id), $item, config('optionable.cache.ttl'));
+        $this->resolveCache()->add(
+            $this->getCacheName($item->id), 
+            $item, 
+            $this->getConfig('optionable.cache.ttl')
+        );
     }
 
     /**
@@ -98,7 +101,7 @@ class OptionableRepository
      */
     private function getCacheName(...$args)
     {
-        return sprintf(config('optionable.cache.name'), ...$args);
+        return sprintf($this->getConfig('optionable.cache.name'), ...$args);
     }
 
     /**
@@ -106,6 +109,18 @@ class OptionableRepository
      */
     private function resolveCache()
     {
-        return app('cache')->tags(config('optionable.cache.tag'));
+        return App::make('cache')->tags($this->getConfig('optionable.cache.tag'));
+    }
+
+    /**
+     * Get config.
+     * 
+     * @param string $key 
+     * @param mixed $default 
+     * @return mixed 
+     */
+    private function getConfig(string $key, mixed $default = null): mixed
+    {
+        return App::make('config')->get($key, $default);
     }
 }
